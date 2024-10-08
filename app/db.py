@@ -32,5 +32,7 @@ class FakeDB:
     def delete_task(self, task_id: int):
         self.tasks = [task for task in self.tasks if task.id != task_id]
 
+    def delete_all_tasks(self):
+        self.tasks = []
 
 db = FakeDB()
